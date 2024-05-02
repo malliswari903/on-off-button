@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+    <style>
+        .container{
+            height: 99vh;
+            width: 99vw;
+            background-color:black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .on{
+           padding: 35px;
+           border-radius: 15px;
+           font-size: 25px;
+           font-family: sans-serif;
+           font-weight: bold;
+            margin: auto;
+            cursor: pointer;
+           background-color: green;
+            color:white
+           
+
+        }
+        .Off{
+            padding: 35px;
+           border-radius: 15px;
+           font-size: 25px;
+            font-family: sans-serif;
+           font-weight: bold;
+            margin: auto;
+            cursor: pointer;
+            color:white; 
+            background-color:red;
+        }
+        .clicked{
+            background-color:orange ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button class="on" onclick=" 
+       if(document.querySelector('button').innerText=='On'){
+        document.querySelector('button').innerText='Off'
+        document.querySelector('.container').classList.add('clicked')
+        document.querySelector('.on').classList.add('Off')
+       } 
+    else if( document.querySelector('button').innerText=='Off'){
+        document.querySelector('button').innerText='On'
+        document.querySelector('.container').classList.remove('clicked')
+        document.querySelector('.on').classList.remove('Off')
+
+
+    }">On</button>
+
+    <script>
+ 
+    </script>
+    
+    </div>
+</body>
+</html>
